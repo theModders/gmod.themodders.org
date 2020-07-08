@@ -1,0 +1,31 @@
+---
+---
+{% include before-content.html %}
+
+<span style="font-size: 14px; display: block; margin-bottom: 25px;">Witaj na Gothic Mody, prywatnej stronie Lorda Michała VIII traktującej o modyfikacjach dla gier z serii Gothic. Mam nadzieję, iż będziesz się tu czuł jak w domu ;)</span>
+
+<!-- This loops through the paginated posts -->
+{% for post in paginator.posts %}
+<article class="post">
+	<a href="{{ post.url }}"><h1>{{ post.title }}</h1></a>
+	<span class="meta">Napisał: {{ post.author }}, {{ post.time }}</span>
+	{{ post.content }}
+</article>
+{% endfor %}
+
+<!-- Pagination links -->
+<div class="pagination">
+	{% if paginator.previous_page %}
+		<a href="{{ paginator.previous_page_path }}" class="previous">
+			&lt; Poprzednia
+		</a>
+	{% endif %}
+	[<strong>{{ paginator.page }}</strong> / {{ paginator.total_pages }}]
+	{% if paginator.next_page %}
+		<a href="{{ paginator.next_page_path }}" class="next">
+			Następna &gt;
+		</a>
+	{% endif %}
+</div>
+
+{% include after-content.html %}
