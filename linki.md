@@ -18,9 +18,10 @@ Strony grup modderskich
 |:--------------------------------------------------:|:--------------------------------------------------------------------------------------:|
 | [Gothermod](https://gothermod.dbv.pl)              | Oficjalny serwis modyfikacji Mgła. Oprócz tego znajdują się tam opisy modów do gothica i dużo innych ciekawych informacji. Gdyby tylko nie te wkurzające reklamy... |
 | [GotModders](https://www.gotmodders.go.pl)         | Oficjalna strona grupy GotModders.                                                     |
-| [Czas Zapłaty](https://czaszaplaty.themodders.org) | Oficjalna strona modu Czas Zapłaty oraz grupy The Modders.                             |
+| [Czas Zapłaty](https://czaszaplaty.themodders.org) | Oficjalna strona modyfikacji Czas Zapłaty oraz grupy The Modders.                      |
 | [The PoziomkaZ](https://www.poziomkaz.pl)          | Oficjalna strona jakże zacnej grupy modderskiej The PoziomkaZ.                         |
-| [Złote Wrota](https://www.zlotewrota.pl)           |  Oficjalna strona modyfikacji Złote Wrota.                                             |
+| [Złote Wrota](https://zlotewrota.org)              | Oficjalna strona modyfikacji Złote Wrota.                                              |
+| [Dzieje Khorinis](https://dziejekhorinis.org)      | Oficjalna strona modyfikacji Dzieje Khorinis groupy SoulFire.                          |
 
 
 Strony o grze Gothic
@@ -38,3 +39,23 @@ Strony o RPG
 | Nazwa                                              | Opis                                                                                   |
 |:--------------------------------------------------:|:--------------------------------------------------------------------------------------:|
 | [Insimilion](https://crpg.iml.pl/)                 | Insimilion Twierdza RPG. Znajdziecie tu porady, recenzje oraz przeróżne opisy gier RPG |
+
+<style>
+	
+.content table {
+    background: black;
+    border-collapse: collapse;
+    margin-bottom: 12px;
+    margin-top: 8px;
+}
+
+.content td, .content th {
+    border: 2px solid #5b2402;
+    padding: 2px 5px;
+    text-align: center;
+}
+
+.content td:first-child {
+    width: 162px;
+}
+</style>

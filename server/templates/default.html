@@ -5,4 +5,10 @@
 
 {{ page.content | markdownify }}
 
+<script>
+	Array.from(document.querySelectorAll(".content img")).forEach(i => i.onerror = (e) => {
+		e.target.style.display = "none";
+	});
+</script>
+
 {% include after-content.html %}

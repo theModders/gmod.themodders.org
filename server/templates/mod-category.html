@@ -1,0 +1,29 @@
+{% include header.html %}
+
+<main>
+	<nav class="menu">
+{% include main-menu-content.html %}
+<h2>Gothic I PL</h2>
+<ul>
+	<li><a href="..">Wszystkie</a></li>
+	<li>--------</li>{%
+	assign urlLength = page.url | size %}{%
+	
+	for otherPage in site.pages %}{%
+		assign urlPrefix = otherPage.url | slice: 0, urlLength %}{%
+		unless urlPrefix != page.url or
+				page.url == otherPage.url or
+				ignored contains otherPage.url
+			%}		<li><a href="{{ otherPage.url }}">{{ otherPage.title }}</a></li>
+{%		endunless %}{%
+	endfor %}
+</ul>
+	</nav>
+	<article class="content {{ page.layout }}">
+
+<h1>{{ page.title }}</h1>
+<span class="meta">Napisał: {{ page.author }}, {{ page.time }}</span>
+
+{{ page.content | markdownify }}
+
+{% include after-content.html %}
