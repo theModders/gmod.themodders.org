@@ -1,5 +1,6 @@
 title: Gothic Mody
 description: Twoje źródło informacji na temat modyfikacji dla gry Gothic! Wywiady, recenzje, opisy i wiele wiele innych.
+author: Lord Michał VIII
 theme: null
 layouts_dir: ./server/templates
 includes_dir: ./server/templates
