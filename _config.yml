@@ -34,10 +34,16 @@ defaults:
       layout: "redirect"
   -
     scope:
-      path: "gallery"
+      path: "gothic-i"
       type: "pages"
     values:
-      layout: "gallery-album"
+      layout: "mod-page"
+  -
+    scope:
+      path: "gothic-ii"
+      type: "pages"
+    values:
+      layout: "mod-page"
 collections:
   category:
     output: true

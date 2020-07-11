@@ -1,0 +1,52 @@
+{% include header.html %}
+
+<main>
+	<nav class="menu">
+{% include main-menu-content.html %}
+{% include mod-categories-menu-content.html %}
+<!-- // TODO: generate menu section titled like parent index.md, containing items not in any subdirectory
+// TODO: iterate over descendant index.md , for each of them create menu section with title and list of links of children of the same directory -->
+{%
+	assign urlParts = page.url | split: '/' %}{%
+	assign dirUrl = "" %}{%
+	for urlPart in urlParts %}{%
+		if forloop.last == false %}{%
+			assign dirUrl = dirUrl | append: urlPart | append: "/" %}{%
+		endif %}{%
+	endfor %}{%
+	assign dirUrlLength = dirUrl | size %}{%
+	
+	for otherPage in site.pages %}{%
+		unless otherPage.url != dirUrl
+			%}		<h2>{{ otherPage.title }} </h2>
+{%		endunless %}{%
+	endfor %}
+
+		<ul>
+{%
+	assign indexPath = "/index.md" %}{%
+	assign indexPathLength = indexPath | size %}{%
+	
+	for otherPage in site.pages %}{%
+		assign urlPrefix = otherPage.url | slice: 0, dirUrlLength %}{%
+		assign indexPathStart = otherPage.path | size | minus: indexPathLength %}{%
+		assign pathSuffix = otherPage.path | slice: indexPathStart, indexPathLength %}{%
+		unless urlPrefix != dirUrl or pathSuffix == indexPath		
+			%}		<li><a href="{{ otherPage.url }}" {%
+			if page.url == otherPage.url 
+				%} class="active" {%
+			endif
+			%}>{{ otherPage.title }}</a></li>
+{%		endunless %}{%
+	endfor %}
+		</ul>
+		{% include friends-menu-content.html %}
+	</nav>
+	<article class="content {{ page.layout }}">
+
+<h1>{{ page.title }}</h1>
+<span class="meta">Napisał: {{ page.author }}, {{ page.time }}</span>
+
+{{ page.content | markdownify }}
+
+{% include after-content.html %}
