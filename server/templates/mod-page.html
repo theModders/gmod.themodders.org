@@ -2,11 +2,10 @@
 
 <main>
 	<nav class="menu">
-{% include main-menu-content.html %}
-{% include mod-categories-menu-content.html %}
-<!-- // TODO: generate menu section titled like parent index.md, containing items not in any subdirectory
-// TODO: iterate over descendant index.md , for each of them create menu section with title and list of links of children of the same directory -->
-{%
+{% 
+	include main-menu-content.html %}{% 
+	include mod-categories-menu-content.html %}{%
+
 	assign urlParts = page.url | split: '/' %}{%
 	assign dirUrl = "" %}{%
 	for urlPart in urlParts %}{%
