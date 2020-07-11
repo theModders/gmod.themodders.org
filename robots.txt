@@ -1,4 +1,3 @@
 User-agent: *
 Allow: /
-Disallow: /client/
 Sitemap: https://gmod.themodders.org/sitemap.xml
